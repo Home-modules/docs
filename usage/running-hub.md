@@ -44,5 +44,5 @@ npm start -- <arguments>
 
 - `--no-log`: Disable logging to `data/log.log`
 - `--debug`: Increase log verbosity level
-- `--api-port <port>`: Change API server port, changing will breask the apps. (default: 703)
+- `--api-port <port>`: Change API server port, changing will break the apps. (default: 703)
 - `--webapp-port <port>`: Change web app hosting port. (default: 80 for HTTP or 443 for HTTPS)
