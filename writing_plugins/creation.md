@@ -6,6 +6,6 @@ To create a plugin, you have to:
 - Create a folder in `/data/plugins` with a machine-friendly name of the plugin (e.g. `/data/plugins/xyz`)
 - Create a `.js` or `.ts` file with the same name (e.g. `/data/plugins/xyz/xyz.js`)
   
-  The plugin code should go inside this file.
+  This file is the plugin's main source file.
 
 There is currently no way to share / install plugins other than copying its folder and editing `plugins.json`.

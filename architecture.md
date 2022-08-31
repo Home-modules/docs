@@ -8,7 +8,7 @@ The hub also hosts the web app.
 
 ## Rooms
 
-Each home is divided into several _rooms_. Each room is a collection of devices and usually has a room controller.
+Each home is divided into several _rooms_. Each room is a collection of devices and has a room controller.
 
 ### Room controllers
 
@@ -16,7 +16,8 @@ All rooms have a _controller_ which main purpose is to to simplify connections a
 
 Instead of each device having its own connection to the hub, it can connect to the room controller, which has a single connection to the hub. This way simplifies the wiring for the connections and saves IO ports on the hub.
 
-Room controllers can be of different types, each having its own software inside the hub.
+Room controllers can be of different types.  
+One example is the Arduino (Serial) room controller which is an Arduino board connected to the hub with a USB cable.
 
 ## Devices
 

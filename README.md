@@ -1,8 +1,8 @@
 # Home_modules
 
-Home_modules is a smart home platform which is focused on extensibility and lack of need for an internet connection.
+Home_modules is a smart home platform which is focused on extensibility and the lack of need for an internet connection.
 
-> _Fun fact: the name `home_modules` came from `node_modules`. The logo is also inspired by the NPM logo._
+> _The name `home_modules` came from `node_modules`. The logo is also inspired by the NPM logo._
 
 ## Documentation
 
