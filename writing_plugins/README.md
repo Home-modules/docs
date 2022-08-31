@@ -6,3 +6,5 @@
 A plugin can be used to add support for a new room controller type(s), new device type(s) or other things.
 
 - [Creating a plugin](creation.md)
+- [Adding a room controller type](room-controller-types.md)
+- [Adding a device type](device-types.md)
