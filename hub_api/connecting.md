@@ -67,7 +67,7 @@ If it fails, the value will be `"error"`. The error can be found in the `error` 
 _^ A request succeeded without returning any data._
 
 > **Note**  
-> The response isn't formatted but is minified. The formatted version is shown here to make it easier to read.**
+> The response isn't formatted but is minified. The formatted version is shown here to make it easier to read.
 
 ```json
 {
