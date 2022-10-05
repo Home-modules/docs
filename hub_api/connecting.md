@@ -19,7 +19,7 @@ The supported methods are GET and POST.
 ```
 
 - Replace `<ip address>` with the IP address of the hub.
-- Replace `<token>` with the auth token. The token is returned by the hub when you log in or change the username.
+- Replace `<token>` with the [auth token](authorization.md#the-auth-token).
 
   The token is not required when the request is of type `account.login`. Instead you can use any non-empty string (e.g. `"null"`)
 - Replace `<request data>` with the URL-encoded JSON of the request.
@@ -33,21 +33,6 @@ The request is similar to the GET method, except that the request data moves to 
 
 <request data>
 ```
-
-### The auth token
-
-The auth token is used as a proof of the user being logged in and also determines which account is performing the request.
-
-Sending a `account.login` request (which doesn't require a token) or a `account.changePassword` request will return an auth token that must be used for future requests.
-
-The token consists of two parts, separated by a colon (`:`):
-
-- The username
-- 32 bytes encoded in HEX
-
-The hub stores the valid tokens for each users in-memory. Whenever a request is received, the hub checks the list of valid tokens for the user and rejects the request if the provided token is not in that list.  
-All tokens will be invalidated upon server restart or after a week of disuse and thus need to login again.  
-Each auth token can make no more than 10 requests per second, otherwise the `429 TOO_MANY_REQUESTS` error will be received.
 
 ### Responses
 
@@ -67,7 +52,7 @@ If it fails, the value will be `"error"`. The error can be found in the `error` 
 _^ A request succeeded without returning any data._
 
 > **Note**  
-> The response isn't formatted but is minified. The formatted version is shown here to make it easier to read.
+> The actual response returned by the hub isn't formatted, it is minified. The formatted version is shown here to make this page easier to read.
 
 ```json
 {
