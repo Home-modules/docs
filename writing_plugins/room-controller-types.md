@@ -133,9 +133,25 @@ constructor(properties: HMApi.T.Room) {
 }
 ```
 
+OR
+
+```ts
+constructor(properties: HMApi.T.Room) {
+  super(properties, false);
+
+  // Initialize fields or other things that devices may use in their constructors
+
+  this.instantiateDevices();
+
+  // Other stuff
+}
+```
+
 Here you can initialize any custom fields. All [built-in fields](#built-in-fields) are already initialized by the base class.
 
 Any initialization code such as connection or IO requests should be inside `init`.
+
+If the devices depend on fields in the room controller in their constructors, you can delay the creation of device instances by passing `false` to the base class constructor and calling `instantiateDevices` when the fields are initialized. (see second code block)
 
 ### `init`
 

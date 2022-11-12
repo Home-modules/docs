@@ -269,8 +269,8 @@ The state of the interactions of the device. Define an initializer to set defaul
 ### `constructor`
 
 ```ts
-constructor(properties: HMApi.T.Device, roomId: string) {
-    super(properties, roomId);
+constructor(properties: HMApi.T.Device, room: RoomControllerInstance) {
+    super(properties, room);
 
     // Custom code
 }
