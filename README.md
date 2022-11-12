@@ -4,6 +4,14 @@ Home_modules is a smart home platform which is focused on extensibility and the 
 
 > _The name `home_modules` came from `node_modules`. The logo is also inspired by the NPM logo._
 
+<!---->
+
+> **Warning**
+>
+> Home_modules is still experimental! Things might be missing or unstable and the APIs may have breaking changes. Please use with caution.
+>
+> You can help Home_modules become stable by testing it and reporting any errors.
+
 ## Documentation
 
 - [Setting up](usage/setup.md)
