@@ -1,5 +1,8 @@
 # Setting up your Home_modules-powered smart home
 
+> **Note**  
+> This guide is very generic, because instructions vary between plugins. Please refer to the plugin's documentation for better guidance.
+
 ## Required items
 
 - A computer as the hub (preferably a Raspberry PI)
@@ -15,48 +18,6 @@ This part will vary depending on the type of the room controllers and devices, b
 2. Install the room controllers (e.g. Arduino boards) in the appropriate locations in each room
 3. Connect the room controllers to the hub.
 4. Install the devices and connect them to their room controllers.
-
-<details><summary>Guide for Raspberry PI, Arduino room controllers and simple devices</summary>
-
-### The hub
-
-1. Install a Raspberry PI in the living room.
-
-### Room controllers (Arduino)
-
-For each room:
-
-1. Pick an Arduino board (Uno or Nano, or Mega if there are many devices) and install a breakout shield. You can also design your own board.
-2. Upload the [`controller-arduino-serial`](github.com/Home-modules/controller-arduino-serial) firmware to the board.
-
-   You can do this step before setting up the hub software, but make sure the current program in the Arduino board doesn't mess up with the hardware.
-3. Connect a 5V power source to the board.
-4. Connect the board to the hub via a long enough USB cable.
-5. Install the board somewhere in the room, preferably on the wall.
-
-> **Warning**  
-> Make sure all connections are solid. Directly solder the connections and avoid ports if you can. Ports are designed for quick connections / disconnections, not permanent connection.
-
-### Devices: Lights
-
-For each light:
-
-1. Pick an electric wire pair. Cut one of the wires. It should look like the image below:
-
-   ![Wire pair with one wire cut](../img/wire-pair-one-cut.png)
-2. Pick a relay module and connect the Common (**COM**) pin to the wire end marked **C**.
-3. Connect the normally open (**NO**) pin of the relay to the wire end marked **D**.
-4. Connect the wire ends marked **E** and **F** to the light.
-5. Connect the wire ends marked **A** and **B** to a power source. **A** to Phase and **B** to Neutral.
-6. Connect the **GND** pin of the relay module to the **GND** pin/bus of the Arduino board (room controller).
-7. Connect the **VCC** pin of the relay module to the **5V** pin/bus of the Arduino board.
-8. Connect the **IN** pin of the relay module to one of the GPIO pins of the Arduino board. Remember the pin number for when you want to setup the device in the software.
-
-The end result should look like this:
-
-![Finished smart lamp wiring](../img/basic-lamp-arduino-wiring-complete.png)
-
-</details>
 
 ## Setting up the software
 

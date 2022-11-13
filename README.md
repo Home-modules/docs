@@ -17,6 +17,10 @@ Home_modules is a smart home platform which is focused on extensibility and the 
 - [Setting up](usage/setup.md)
 - [Architecture](architecture.md)
 
+### Official plugins
+
+- [Arduino](official_plugins/arduino/README.md)
+
 ### For developers
 
 - [Hub API](hub_api/README.md)
