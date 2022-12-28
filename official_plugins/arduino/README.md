@@ -13,7 +13,7 @@ Communicate with the Arduino board via a serial port. This serial port can be a 
 
 ID: `arduino:serial`
 
-- [Setup](arduino_serial_setup.md.md)
+- [Setup](arduino_serial_setup.md)
 
 ## Devices
 
