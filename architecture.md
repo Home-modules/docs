@@ -1,5 +1,7 @@
 # Home_modules architecture
 
+![Architecture diagram](img/architecture.png)
+
 ## The hub
 
 Every smart device in the home is directly or indirectly (via a room controller) connected to the _hub_. The hub is a computer (most commonly a Raspberry PI) that controls all the devices in the house. When you open the Home_modules app and control your devices, the app communicates with the hub.
@@ -18,6 +20,8 @@ Instead of each device having its own connection to the hub, it can connect to t
 
 Room controllers can be of different types.  
 One example is the Arduino (Serial) room controller which is an Arduino board connected to the hub with a USB cable.
+
+The hub itself may also act as a room controller, provided it has suitable IO ports and a plugin.
 
 ## Devices
 
