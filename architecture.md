@@ -41,4 +41,4 @@ Devices connect to the hub via a room controller.
 
 Each room controller type and device type needs a piece of software inside the hub, so that the hub can communicate with it. These pieces of code are plugins.
 
-A plugin can add support for room controller types and/or device types. For example, the `builtin` plugin brings support for room controllers based on Arduino and simple devices.
+A plugin can add support for room controller types and/or device types. For example, the [Arduino plugin](official_plugins/arduino/README.md) brings support for room controllers based on Arduino and simple devices.
