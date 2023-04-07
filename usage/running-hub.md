@@ -54,6 +54,31 @@
 
    Wait until you see the `Home_modules hub is now running` message.
 
+   If you've followed the instructions correctly and the above command didn't work, try this:
+
+   ```sh
+   npm run start-no-pm2
+   ```
+
+   > Warning  
+   > If you use any of the fallbacks, pm2 will not be used. As a side effect, the hub doesn't restart correctly, it will simply quit.
+
+   If that didn't work either, try this:
+
+   ```sh
+   cd src
+   npx ts-node index.js
+   ```
+
+   If that didn't work either, compile the TypeScript files if you haven't done so, then try this:
+
+   ```sh
+   cd src
+   node index.js
+   ```
+
+   If that still doesn't work, double check that you've followed the instructions correctly. If you've followed the instructions correctly, tried all fallbacks and the hub still refuses to start, [create an issue on our GitHub](https://github.com/Home-modules/hub/issues/new/choose).
+
 ## Command line arguments
 
 ```sh
@@ -64,3 +89,9 @@ npm start -- <arguments>
 - `--debug`: Increase log verbosity level
 - `--api-port <port>`: Change the API server port, will break the apps. (default: 703)
 - `--webapp-port <port>`: Change the web app hosting port. (default: 80 for HTTP or 443 for HTTPS)
+
+If the command line arguments were ignored (an NPM bug), add another `--`:
+
+```sh
+npm start -- -- <arguments>
+```
