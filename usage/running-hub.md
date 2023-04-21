@@ -34,7 +34,7 @@
 6. Optional: To increase startup speed, compile all TypeScript files to JavaScript:
 
    ```sh
-   tsc
+   npx tsc
    ```
 
    > **Note**  
@@ -43,7 +43,7 @@
    Or if you are modifying source files:
 
    ```sh
-   tsc --watch
+   npx tsc --watch
    ```
 
 7. Start the hub:
