@@ -8,6 +8,12 @@
    cd webapp
    ```
 
+   Or if you are updating the hub:
+
+   ```sh
+   git pull
+   ```
+
 3. Install dependencies
 
    ```sh
@@ -31,14 +37,11 @@
 
 5. Optional: To host the web app from the hub, [build the web app](building-web-app.md) and copy the contents of the `build` directory to `data/webapp`.
 
-6. Optional: To increase startup speed, compile all TypeScript files to JavaScript:
+6. Compile all TypeScript files to JavaScript:
 
    ```sh
    npx tsc
    ```
-
-   > **Note**  
-   > Don't forget to do this again after updating the hub. (this isn't required if you skipped this step or deleted the JS files.)
 
    Or if you are modifying source files:
 
@@ -67,13 +70,6 @@
 
    ```sh
    cd src
-   npx ts-node index.js
-   ```
-
-   If that didn't work either, compile the TypeScript files if you haven't done so, then try this:
-
-   ```sh
-   cd src
    node index.js
    ```
 
@@ -95,3 +91,7 @@ If the command line arguments were ignored (an NPM bug), add another `--`:
 ```sh
 npm start -- -- <arguments>
 ```
+
+## Updating hub software
+
+To update the hub, run the above steps again. This process might be automated in the future.

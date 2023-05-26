@@ -31,7 +31,7 @@ To create a plugin, you have to:
     }
     ```
 
-  - Use `tsc` or `tsc --watch` to compile the TypeScript files. The hub cannot run TypeScript plugins that are not compiled, so it will run `tsc` to compile the plugin, but this will only happen if the plugin is installed via the hub. You aren't required to publish the JS files but doing so can reduce installation time.
+  - Use `tsc` or `tsc --watch` to compile the TypeScript files. The hub cannot run TypeScript plugins, so it is required to ship compiled JavaScript files too.
   - Make sure the `main` property in `package.json` has the `.js` extension.
 - Open the `package.json` of the **Hub** (not your plugin) and add your plugin to the list of the dependencies:
   

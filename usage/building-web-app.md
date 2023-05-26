@@ -8,6 +8,12 @@
    cd webapp
    ```
 
+   Or if you are updating:
+
+   ```sh
+   git pull
+   ```
+
    > **Note**  
    > The version of the hub and the web app must be the same, otherwise the web app will either show an error or crash.
 
