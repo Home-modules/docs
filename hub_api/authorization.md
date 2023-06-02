@@ -25,7 +25,7 @@ A token will be returned in the response, which should be used for future reques
 
 **Example request:**
 
-```json
+```jsonc
 {
     "type": "account.login",
     "username": "admin",
@@ -60,7 +60,7 @@ Use the `account.changePassword` request to change the password of the current a
 
 **Example request:**
 
-```json
+```jsonc
 {
     "type": "account.changePassword",
     "oldPassword": "admin",
@@ -172,7 +172,7 @@ To terminate all other sessions, send a `account.logoutOtherSessions` request. T
 
 **Example response:**
 
-```json
+```jsonc
 {
     "type": "ok",
     "data": {
@@ -185,7 +185,7 @@ To terminate a specific session, use the `account.logoutSession` request.
 
 **Example request:**
 
-```json
+```jsonc
 {
     "type": "account.logoutSession",
     "id": "b7415393c9c24fbfc7f3ef0ddea99377ae93c0be8e920aa5a0c8195174b06044" // Taken from the response of the `account.getSessions` request
