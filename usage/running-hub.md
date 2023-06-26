@@ -83,14 +83,21 @@ npm start -- <arguments>
 
 - `--no-log`: Disable logging to `data/log.log`
 - `--debug`: Increase log verbosity level
-- `--api-port <port>`: Change the API server port, will break the apps. (default: 703)
-- `--webapp-port <port>`: Change the web app hosting port. (default: 80 for HTTP or 443 for HTTPS)
 
 If the command line arguments were ignored (an NPM bug), add another `--`:
 
 ```sh
 npm start -- -- <arguments>
 ```
+
+## Settings file
+
+The settings file is located at `data/settings.json`.
+
+- **`port`**: The port number on which to host the API and web app. Default is 80 for HTTP and 443 for HTTPS.
+- **`forceHTTP`**: Whether to use HTTP even if HTTPS certificate and key was found. Disabled by default.
+- **`autoRestartMaxTries`**: The maximum number of times a failed room / device will restart automatically. Default is 5 times.
+- **`autoRestartDelay`**: The interval between each automatic restart, in case the last one was unsuccessful.
 
 ## Updating hub software
 

@@ -15,10 +15,11 @@ The supported methods are GET and POST.
 #### HTTP GET
 
 ```
-<ip address>:703/<token>/<request data>
+<ip address>:<port>/request/<token>/<request data>
 ```
 
 - Replace `<ip address>` with the IP address of the hub.
+- Replace `<port>` with the port on which the API is hosted. By default, it is 80 for HTTP and 443 for HTTPS.
 - Replace `<token>` with the [auth token](authorization.md#the-auth-token).
 
   The token is not required when the request is of type `account.login`. Instead you can use any non-empty string (e.g. `"null"`)
@@ -29,10 +30,23 @@ The supported methods are GET and POST.
 The request is similar to the GET method, except that the request data moves to the request body and is not URL-encoded.
 
 ```
-<ip address>:703/<token>
+<ip address>:<port>/request/<token>
 
 <request data>
 ```
+
+##### Token in header
+
+```
+<ip address>:<port>/request
+Token: <token>
+
+<request data>
+```
+
+Token can be moved to an HTTP header. For `account.login` requests, the header can be absent.
+
+Token in request path takes precedence over token in request header.
 
 ### Responses
 

@@ -29,14 +29,14 @@ This part will vary depending on the type of the room controllers and devices, b
 
 If the hub has a graphical operating system and a browser that you can use:
 
-1. Open <http://localhost> (or <https://localhost> if HTTPS is enabled) on your browser.
+1. Open <http://localhost/webapp> (or <https://localhost/webapp> if HTTPS is enabled) on your browser.
 2. Install the app if prompted to.
 
 Otherwise:
 
 1. Connect the hub to a local network.
 2. Connect your smart phone or computer to the same network.
-3. Find the local IP address of the hub and enter it in the browser's address bar on your phone or laptop.
+3. Find the local IP address of the hub and enter the above URL in the browser's address bar on your device, except replace `localhost` with the IP address.
 4. Install the app if prompted to.
 
 ### Login
